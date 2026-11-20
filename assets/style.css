@@ -794,3 +794,20 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+.plan-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.plan-list li {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.plan-list li .status {
+  text-align: center;
+  margin-top: 4px;
+}
