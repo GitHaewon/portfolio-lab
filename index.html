@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101b2e">
-  <meta name="description" content="스마트 팩토리의 자율이동로봇(AMR) — 위치 추정, 경로 계획, 작업 배분을 공부하고 탐구하는 학생의 포트폴리오입니다.">
+  <meta name="description" content="스스로 판단하고 함께 움직이는 이동 로봇 — 강화학습 기반 판단과 멀티에이전트 협업을 공부하고 탐구하는 학생의 포트폴리오입니다.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:title" content="AI Research Portfolio | 연구 포트폴리오">
-  <meta property="og:description" content="스마트 팩토리의 자율이동로봇(AMR)을 탐구합니다.">
+  <meta property="og:description" content="스스로 판단하고 함께 움직이는 이동 로봇을 탐구합니다.">
   <title>AI Research Portfolio | 연구 포트폴리오</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css?v=activity-groups">
@@ -34,18 +34,18 @@
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="container hero-layout">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span> PHYSICAL AI · AMR</p>
-          <p class="hero-overline">전주대학교 인공지능학과 · 자율이동로봇 탐구 중</p>
-          <h1 id="hero-title">스마트 팩토리의<br><em>자율이동로봇(AMR)</em>을<br>탐구합니다.</h1>
-          <p class="hero-description">공장과 물류 현장에서 AMR이 자기 위치를 알고, 장애물을 피해 길을 찾고, 맡은 운반 작업을 순서대로 처리하는 과정에 관심이 있습니다. ROS 2와 Nav2를 중심으로 위치 추정, 경로 계획, 여러 로봇의 작업 배분을 시뮬레이션에서 직접 실험하며 공부하고 있습니다.</p>
+          <p class="eyebrow"><span class="eyebrow-line"></span> PHYSICAL AI · MULTI-ROBOT</p>
+          <p class="hero-overline">전주대학교 인공지능학과 · 이동 로봇 탐구 중</p>
+          <h1 id="hero-title"><em>스스로 판단하고</em><br><em>함께 움직이는</em><br>이동 로봇을 탐구합니다.</h1>
+          <p class="hero-description">공장과 물류 현장에서 일하는 이동 로봇에 관심이 있습니다. 로봇 한 대 한 대가 센서 정보를 보고 장애물을 피할지, 기다릴지, 돌아갈지를 스스로 정하는 강화학습과, 여러 대가 한 공간에서 임무를 나누고 좁은 통로를 양보하는 멀티에이전트 협업을 공부하고 있습니다. ROS 2와 MuJoCo 시뮬레이션에서 기존 제어 방식과 비교하며 실험합니다.</p>
           <div class="hero-actions"><a class="button button-light" href="#projects">프로젝트 살펴보기 <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#activities">활동 기록 <span aria-hidden="true">↓</span></a></div>
         </div>
-        <div class="hero-art" role="img" aria-label="AMR의 위치 추정, 경로 계획, 작업 배분 흐름을 표현한 추상적 다이어그램">
+        <div class="hero-art" role="img" aria-label="이동 로봇의 주변 인식, 강화학습 기반 판단, 다중 로봇 협업 흐름을 표현한 추상적 다이어그램">
           <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
           <span class="art-cross art-cross-one">+</span><span class="art-cross art-cross-two">+</span>
-          <div class="art-node art-node-one"><span class="art-index">01 / LOCALIZE</span><strong>위치 추정</strong><small>LiDAR · AMCL</small></div>
-          <div class="art-node art-node-two"><span class="art-index">02 / PLAN</span><strong>경로 계획</strong><small>Nav2 · Costmap</small></div>
-          <div class="art-node art-node-three"><span class="art-index">03 / DELIVER</span><strong>작업 배분</strong><small>Task queue · Multi-robot</small></div>
+          <div class="art-node art-node-one"><span class="art-index">01 / SENSE</span><strong>주변 인식</strong><small>LiDAR · Localization</small></div>
+          <div class="art-node art-node-two"><span class="art-index">02 / DECIDE</span><strong>스스로 판단</strong><small>강화학습 · PPO</small></div>
+          <div class="art-node art-node-three"><span class="art-index">03 / COORDINATE</span><strong>함께 움직이기</strong><small>Multi-agent · Task allocation</small></div>
           <span class="art-center">R<span>.</span></span>
         </div>
       </div>
