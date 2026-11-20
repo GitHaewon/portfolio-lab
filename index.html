@@ -3,195 +3,195 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101b2e">
-  <meta name="description" content="스스로 판단하고 함께 움직이는 이동 로봇 — 강화학습 기반 판단과 멀티에이전트 협업을 공부하고 탐구하는 학생의 포트폴리오입니다.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="스스로 판단하고 함께 움직이는 이동 로봇 — 강화학습 기반 판단과 멀티에이전트 협업을 공부하고 탐구하는 박해원의 포트폴리오입니다.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ko_KR">
-  <meta property="og:title" content="AI Research Portfolio | 연구 포트폴리오">
+  <meta property="og:title" content="박해원 · Physical AI Portfolio">
   <meta property="og:description" content="스스로 판단하고 함께 움직이는 이동 로봇을 탐구합니다.">
-  <title>AI Research Portfolio | 연구 포트폴리오</title>
+  <title>박해원 · Physical AI Portfolio</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css?v=physical-ai-rl">
+  <link rel="stylesheet" href="assets/mono.css?v=1">
   <script src="assets/app.js?v=multi-category" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 바로 가기</a>
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="연구 포트폴리오 홈">
-        <span class="brand-mark" aria-hidden="true">R<span class="brand-dot">.</span></span>
-        <span class="brand-copy"><strong>Research Archive</strong><small>AI · DATA · PRACTICE</small></span>
+      <a class="brand" href="#home" aria-label="박해원 포트폴리오 홈">
+        <span class="brand-copy"><strong>박해원</strong><small>Physical AI Engineer</small></span>
       </a>
       <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
       <nav class="nav" id="primary-nav" aria-label="주 메뉴">
-        <a href="#home">Home</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#activities">Activities</a><a href="#awards">Awards</a><a href="certificates.html">이수증</a><a href="licenses.html">자격증</a><a href="#skills">Skills</a>
+        <a href="#home">Profile</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#activities">Activities</a><a href="#awards">Awards</a><a href="#skills">Skills</a><a href="certificates.html">이수증</a><a href="licenses.html">자격증</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="container hero-layout">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span> PHYSICAL AI · MULTI-ROBOT</p>
-          <p class="hero-overline">박해원 · 전주대학교 인공지능학과 · 이동 로봇 탐구 중</p>
-          <h1 id="hero-title"><em>스스로 판단하고</em><br><em>함께 움직이는</em><br>이동 로봇을 탐구합니다.</h1>
-          <p class="hero-description">사람 대신 현장에서 일하는 이동 로봇이 어떻게 스스로 판단하고, 여러 대가 어떻게 함께 일할 수 있는지에 관심이 있습니다. 로봇이 카메라와 라이다(LiDAR) 같은 센서로 주변을 이해하는 방법, 상황에 맞는 행동을 스스로 배우는 강화학습, 여러 로봇이 일을 나누고 조율하는 멀티에이전트 시스템을 공부하고 있으며, 스마트 팩토리와 물류 시뮬레이션에서 직접 실험하며 이해를 넓혀 가고 있습니다.</p>
-          <div class="hero-actions"><a class="button button-light" href="#projects">프로젝트 살펴보기 <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#activities">활동 기록 <span aria-hidden="true">↓</span></a></div>
-        </div>
-        <div class="hero-art" role="img" aria-label="이동 로봇의 주변 인식, 강화학습 기반 판단, 다중 로봇 협업 흐름을 표현한 추상적 다이어그램">
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <span class="art-cross art-cross-one">+</span><span class="art-cross art-cross-two">+</span>
-          <div class="art-node art-node-one"><span class="art-index">01 / SENSE</span><strong>주변 인식</strong><small>Camera · LiDAR</small></div>
-          <div class="art-node art-node-two"><span class="art-index">02 / DECIDE</span><strong>스스로 판단</strong><small>강화학습 · PPO</small></div>
-          <div class="art-node art-node-three"><span class="art-index">03 / COORDINATE</span><strong>함께 움직이기</strong><small>Multi-agent · Task allocation</small></div>
-          <span class="art-center">R<span>.</span></span>
+    <!-- PROFILE -->
+    <section class="m-profile" id="home" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="m-page-label"><span>Profile</span><span>Portfolio 2026</span></p>
+        <div class="m-profile-grid">
+          <div class="m-col">
+            <p class="m-name">박해원</p>
+            <p class="m-role">Physical AI Engineer · 피지컬 AI</p>
+            <dl class="m-kv">
+              <div><dt>소속</dt><dd>전주대학교 인공지능학과 재학</dd></div>
+              <div><dt>관심</dt><dd>이동 로봇 · 강화학습 · 멀티에이전트</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:hye1119703@naver.com">hye1119703@naver.com</a></dd></div>
+              <div><dt>GitHub</dt><dd><a href="https://github.com/GitHaewon" target="_blank" rel="noopener">github.com/GitHaewon</a></dd></div>
+            </dl>
+          </div>
+          <div class="m-col m-statement">
+            <h1 id="hero-title">스스로 판단하고<br><mark>함께 움직이는 이동 로봇</mark>을<br>탐구합니다.</h1>
+            <p>사람 대신 현장에서 일하는 이동 로봇이 어떻게 스스로 판단하고, 여러 대가 어떻게 함께 일할 수 있는지에 관심이 있습니다. 카메라와 라이다(LiDAR)로 주변을 이해하는 방법, 상황에 맞는 행동을 스스로 배우는 강화학습, 여러 로봇이 일을 나누고 조율하는 멀티에이전트 시스템을 공부하며, 스마트 팩토리와 물류 시뮬레이션에서 직접 실험하고 있습니다.</p>
+            <div class="m-actions"><a href="#projects">프로젝트 보기 →</a><a href="#activities">활동 기록 ↓</a></div>
+          </div>
+          <div class="m-col">
+            <p class="m-label">Selected Projects</p>
+            <ol class="m-index">
+              <li><a href="projects/industrial-sim-capstone.html"><span>2026.07</span><strong>Industrial Sim Capstone</strong><em>스마트 팩토리 물류 시뮬레이션 · 완료</em></a></li>
+              <li><a href="projects/physical-ai-mobility.html"><span>2026.11 ~</span><strong>Physical AI 멀티 로봇 주행</strong><em>강화학습 PPO vs MPPI · 진행 중</em></a></li>
+              <li><a href="projects/smart-apple-apc.html"><span>2026.11 ~</span><strong>Smart APC</strong><em>사과 선별 · AMR 물류 · 진행 중</em></a></li>
+              <li><a href="projects/jj-library-ocr.html"><span>2026.11 ~</span><strong>전주대 도서관 책등 OCR</strong><em>YOLO + OCR 담당 · 진행 중</em></a></li>
+            </ol>
+          </div>
         </div>
       </div>
-      <div class="container hero-bottom"><span>SCROLL TO EXPLORE</span><span>01 — 05</span></div>
     </section>
 
-
-    <section class="section research-section" id="research" aria-labelledby="research-title">
-      <div class="container"><div class="section-heading"><div><p class="section-kicker">01 / RESEARCH</p><h2 id="research-title" class="section-title">관심 연구 분야<span class="accent-period">.</span></h2></div><p class="section-lead">현장에서 일하는 이동 로봇이 어떻게 스스로 판단하고 함께 일할 수 있을까. 이 하나의 질문을 인식, 판단, 협업의 세 단계로 나눠 탐구합니다.</p></div>
-        <div class="research-grid">
-          <article class="research-card"><span class="research-number">01</span><div class="research-icon" aria-hidden="true">◎</div><p class="card-label">PERCEPTION</p><h3>주변을 이해하는 로봇</h3><p>카메라와 라이다(LiDAR)로 얻은 정보를 바탕으로, 로봇이 자기 위치와 주변 물체, 장애물을 파악하는 방법을 공부합니다.</p><div class="question"><span>탐색 질문</span><strong>센서 정보가 불완전할 때, 로봇은 주변을 얼마나 믿고 움직여도 될까?</strong></div></article>
-          <article class="research-card"><span class="research-number">02</span><div class="research-icon" aria-hidden="true">↻</div><p class="card-label">REINFORCEMENT LEARNING</p><h3>스스로 판단하는 로봇</h3><p>정해진 규칙 대신 시뮬레이션 속 시행착오를 통해, 로봇이 상황에 맞는 행동을 스스로 배우는 강화학습을 공부합니다.</p><div class="question"><span>탐색 질문</span><strong>학습한 판단이 처음 보는 상황에서도 안전하게 작동하려면 무엇이 필요할까?</strong></div></article>
-          <article class="research-card"><span class="research-number">03</span><div class="research-icon" aria-hidden="true">⁂</div><p class="card-label">MULTI-AGENT</p><h3>함께 일하는 로봇</h3><p>여러 대의 로봇이 일을 나누고, 같은 공간에서 서로 길을 양보하며 작업을 끝내는 멀티에이전트 협업을 공부합니다.</p><div class="question"><span>탐색 질문</span><strong>로봇이 늘어날수록 생기는 충돌과 대기를 어떻게 줄일 수 있을까?</strong></div></article>
+    <!-- RESEARCH -->
+    <section class="section m-split" id="research" aria-labelledby="research-title">
+      <div class="container m-split-grid">
+        <div class="m-split-head">
+          <p class="section-kicker">01 / Research</p>
+          <h2 id="research-title" class="section-title">관심 연구 분야</h2>
+          <p class="section-lead">현장에서 일하는 이동 로봇이 어떻게 스스로 판단하고 함께 일할 수 있을까. 이 하나의 질문을 인식, 판단, 협업의 세 단계로 나눠 탐구합니다.</p>
         </div>
+        <ol class="m-rows">
+          <li><span class="m-num">01</span><div><p class="m-tag">Perception</p><h3>주변을 이해하는 로봇</h3><p>카메라와 라이다(LiDAR)로 얻은 정보를 바탕으로, 로봇이 자기 위치와 주변 물체, 장애물을 파악하는 방법을 공부합니다.</p></div><p class="m-q"><span>탐색 질문</span>센서 정보가 불완전할 때, 로봇은 주변을 얼마나 믿고 움직여도 될까?</p></li>
+          <li><span class="m-num">02</span><div><p class="m-tag">Reinforcement Learning</p><h3>스스로 판단하는 로봇</h3><p>정해진 규칙 대신 시뮬레이션 속 시행착오를 통해, 로봇이 상황에 맞는 행동을 스스로 배우는 강화학습을 공부합니다.</p></div><p class="m-q"><span>탐색 질문</span>학습한 판단이 처음 보는 상황에서도 안전하게 작동하려면 무엇이 필요할까?</p></li>
+          <li><span class="m-num">03</span><div><p class="m-tag">Multi-agent</p><h3>함께 일하는 로봇</h3><p>여러 대의 로봇이 일을 나누고, 같은 공간에서 서로 길을 양보하며 작업을 끝내는 멀티에이전트 협업을 공부합니다.</p></div><p class="m-q"><span>탐색 질문</span>로봇이 늘어날수록 생기는 충돌과 대기를 어떻게 줄일 수 있을까?</p></li>
+        </ol>
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section class="section projects-section" id="projects" aria-labelledby="projects-title">
-      <div class="container"><div class="section-heading"><div><p class="section-kicker">02 / SELECTED WORK</p><h2 id="projects-title" class="section-title">프로젝트 아카이브<span class="accent-period">.</span></h2></div></div>
-        <div class="filter-bar" lang="en" role="group" aria-label="Filter projects by category">
-          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All <span>4</span></button>
-          <button class="filter-button" type="button" data-filter="vision" aria-pressed="false">Vision AI</button>
-          <button class="filter-button" type="button" data-filter="robotics" aria-pressed="false">Robotics</button>
+      <div class="container">
+        <div class="m-section-top">
+          <div><p class="section-kicker">02 / Selected Work</p><h2 id="projects-title" class="section-title">프로젝트</h2></div>
+          <div class="filter-bar" lang="en" role="group" aria-label="Filter projects by category">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All <span>4</span></button>
+            <button class="filter-button" type="button" data-filter="vision" aria-pressed="false">Vision AI</button>
+            <button class="filter-button" type="button" data-filter="robotics" aria-pressed="false">Robotics</button>
+          </div>
         </div>
         <div class="project-grid" id="project-grid">
           <article class="project-card" data-category="robotics">
-            <a href="projects/industrial-sim-capstone.html" class="project-image" aria-label="Industrial Sim Capstone 프로젝트 상세 보기"><img src="assets/industrial-sim/gazebo-world.jpg" alt="컨베이어, 로봇팔, 이동식 상자가 배치된 Gazebo 공장 월드" width="1280" height="720" loading="lazy"><span class="image-corner">CAPSTONE</span></a>
+            <a href="projects/industrial-sim-capstone.html" class="project-image" aria-label="Industrial Sim Capstone 프로젝트 상세 보기"><img src="assets/industrial-sim/gazebo-scene.jpg" alt="컨베이어, 로봇팔, 이동식 상자가 배치된 Gazebo 공장 월드" width="956" height="538" loading="lazy"></a>
             <div class="project-content">
-              <div class="project-meta"><span class="status status-done">완료</span><span>AI 캡스톤디자인</span></div>
-              <h3><a href="projects/industrial-sim-capstone.html">Industrial Sim Capstone · 스마트 팩토리 물류 시뮬레이션</a></h3>
+              <div class="project-meta"><span>01 · 2026.07 · 개인</span><span class="status status-done">완료</span></div>
+              <h3><a href="projects/industrial-sim-capstone.html">Industrial Sim Capstone</a></h3>
+              <p class="m-sub">스마트 팩토리 물류 시뮬레이션</p>
               <p>컨베이어 공급, RGB-D 비전 인식, 로봇팔 Pick &amp; Place, Nav2 AMR 운송을 하나의 ROS 2 공정 상태 머신으로 통합했습니다. 시드 42 실행에서 A/B/C 3건 배송 완료, 단위 테스트 20/20 통과.</p>
-              <div class="project-footer"><span>ROS 2 · Gazebo · Nav2 · 시연 영상</span><a href="projects/industrial-sim-capstone.html" aria-label="Industrial Sim Capstone 자세히 보기">자세히 보기 <span aria-hidden="true">↗</span></a></div>
+              <div class="project-footer"><span>ROS 2 · Gazebo · Nav2</span><a href="projects/industrial-sim-capstone.html" aria-label="Industrial Sim Capstone 자세히 보기">자세히 보기 →</a></div>
             </div>
           </article>
           <article class="project-card" data-category="robotics">
-            <a href="projects/physical-ai-mobility.html" class="project-image physical-ai-image" aria-label="Physical AI 모빌리티 프로젝트 상세 보기">
-              <span class="physical-ai-route" aria-hidden="true"></span>
-              <span class="image-corner">PHYSICAL AI</span>
+            <a href="projects/physical-ai-mobility.html" class="project-image m-placeholder" aria-label="Physical AI 모빌리티 프로젝트 상세 보기">
+              <span class="m-ph-text">Observe → Policy → Act<small>LiDAR · Waypoint → PPO → Speed · Steer</small></span>
             </a>
             <div class="project-content">
-              <div class="project-meta"><span class="status status-active">진행 중</span><span>이동 로봇</span></div>
-              <h3><a href="projects/physical-ai-mobility.html">Physical AI · 강화학습 기반 멀티 로봇 주행</a></h3>
+              <div class="project-meta"><span>02 · 2026.11 ~ · 개인</span><span class="status status-active">진행 중</span></div>
+              <h3><a href="projects/physical-ai-mobility.html">Physical AI 멀티 로봇 주행</a></h3>
+              <p class="m-sub">강화학습 기반 차량형 로봇 판단</p>
               <p>차량형 로봇이 이동 장애물 앞에서 강화학습(PPO)으로 스스로 판단하게 하고, MPPI와 비교한 뒤 여러 대의 협업 주행으로 확장합니다. 현재 시뮬레이션 환경을 구축하고 있습니다.</p>
-              <div class="project-footer"><span>강화학습 · 멀티에이전트</span><a href="projects/physical-ai-mobility.html" aria-label="Physical AI 모빌리티 자세히 보기">자세히 보기 <span aria-hidden="true">↗</span></a></div>
+              <div class="project-footer"><span>강화학습 · 멀티에이전트</span><a href="projects/physical-ai-mobility.html" aria-label="Physical AI 모빌리티 자세히 보기">자세히 보기 →</a></div>
             </div>
           </article>
           <article class="project-card" data-category="robotics">
-            <a href="projects/smart-apple-apc.html" class="project-image apc-image" aria-label="Smart APC 사과 선별·물류 자동화 프로젝트 상세 보기">
-              <span class="apc-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
-              <span class="image-corner">SMART APC</span>
+            <a href="projects/smart-apple-apc.html" class="project-image m-placeholder" aria-label="Smart APC 사과 선별·물류 자동화 프로젝트 상세 보기">
+              <span class="m-ph-text">Grade → Route → Deliver<small>Camera grading · AMR logistics</small></span>
             </a>
             <div class="project-content">
-              <div class="project-meta"><span class="status status-active">진행 중</span><span>3인 팀 프로젝트</span></div>
-              <h3><a href="projects/smart-apple-apc.html">Smart APC · 사과 선별·물류 자동화</a></h3>
-              <p>카메라로 사과 등급을 판정하고 AMR이 등급별 구역으로 운반하는 과정을 ROS 2·Gazebo로 구현합니다. AMR 주행·물류 파트를 맡아 Nav2 운반 기능을 개발하고 있습니다.</p>
-              <div class="project-footer"><span>ROS 2 · Nav2 · AMR</span><a href="projects/smart-apple-apc.html" aria-label="Smart APC 자세히 보기">자세히 보기 <span aria-hidden="true">↗</span></a></div>
+              <div class="project-meta"><span>03 · 2026.11 ~ · 팀</span><span class="status status-active">진행 중</span></div>
+              <h3><a href="projects/smart-apple-apc.html">Smart APC</a></h3>
+              <p class="m-sub">사과 선별 · 물류 자동화</p>
+              <p>카메라로 사과 등급을 판정하고 AMR이 등급별 구역으로 운반하는 과정을 ROS 2 · Gazebo로 구현합니다. AMR 주행 · 물류 파트를 맡아 Nav2 운반 기능을 개발하고 있습니다.</p>
+              <div class="project-footer"><span>ROS 2 · Nav2 · AMR</span><a href="projects/smart-apple-apc.html" aria-label="Smart APC 자세히 보기">자세히 보기 →</a></div>
             </div>
           </article>
           <article class="project-card" data-category="vision">
             <a href="projects/jj-library-ocr.html" class="project-image" aria-label="전주대 도서관 책등 OCR 프로젝트 상세 보기">
-              <img src="assets/jj-library/card-detection.png" alt="책등의 청구기호 스티커마다 파란 검출 박스와 신뢰도가 표시된 사진" width="361" height="273" loading="lazy">
-              <span class="image-corner">OCR</span>
+              <img src="assets/jj-library/test-detection-02.jpg" alt="책등의 청구기호 스티커마다 검출 박스와 신뢰도가 표시된 사진" width="960" height="720" loading="lazy">
             </a>
             <div class="project-content">
-              <div class="project-meta"><span class="status status-active">진행 중</span><span>전주대학교 도서관</span></div>
+              <div class="project-meta"><span>04 · 2026.11 ~ · 6인 팀</span><span class="status status-active">진행 중</span></div>
               <h3><a href="projects/jj-library-ocr.html">전주대 도서관 책등 OCR</a></h3>
-              <p>책장 사진에서 YOLO11n으로 청구기호 스티커를 찾고(재현율 91.6%, 정밀도 97.4%) OCR로 읽는 장서점검 데모를 개발 중입니다. 이후 AR 글래스와 로봇으로 확장할 계획입니다.</p>
-              <div class="project-footer"><span>YOLO11n · PP-OCRv5 · 문자인식</span><a href="projects/jj-library-ocr.html" aria-label="전주대 도서관 책등 OCR 자세히 보기">자세히 보기 <span aria-hidden="true">↗</span></a></div>
+              <p class="m-sub">장서점검 AI · YOLO + OCR 담당</p>
+              <p>책장 사진에서 YOLO11n으로 청구기호 스티커를 찾고 OCR로 읽는 장서점검 첫 데모를 만들었습니다. OCR을 PP-OCRv5로 바꿔 줄 일치율을 2.3배 높였고(평가 사진 7장 기준), 평가 데이터를 늘리는 중입니다.</p>
+              <div class="project-footer"><span>YOLO11n · PP-OCRv5</span><a href="projects/jj-library-ocr.html" aria-label="전주대 도서관 책등 OCR 자세히 보기">자세히 보기 →</a></div>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section activities-section" id="activities" aria-labelledby="activities-title">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker">03 / ACTIVITIES</p>
-            <h2 id="activities-title" class="section-title">활동 기록<span class="accent-period">.</span></h2>
-          </div>
+    <!-- ACTIVITIES -->
+    <section class="section m-split" id="activities" aria-labelledby="activities-title">
+      <div class="container m-split-grid">
+        <div class="m-split-head">
+          <p class="section-kicker">03 / Activities</p>
+          <h2 id="activities-title" class="section-title">활동 기록</h2>
         </div>
-
-        <section class="activity-group" aria-labelledby="activities-physical-title">
-          <h3 id="activities-physical-title">피지컬 AI</h3>
-          <ul class="publication-list activity-list" role="list">
-            <li class="publication-row activity-row">
-              <div>
-                <h4><a href="projects/industrial-sim-capstone.html">Industrial Sim Capstone · 스마트 팩토리 물류 시뮬레이션</a></h4>
-                <p>RGB-D 비전 인식, 컨베이어, 로봇팔, Nav2 AMR을 하나의 ROS 2 물류 공정으로 통합했습니다.</p>
-              </div>
-              <div class="activity-meta">
-                <time datetime="2026-07">2026.07</time>
-                <span class="status status-done">개인 · 완료</span>
-              </div>
-            </li>
-            <li class="publication-row activity-row">
-              <div>
-                <h4><a href="projects/physical-ai-mobility.html">Physical AI · 강화학습 기반 멀티 로봇 주행</a></h4>
-                <p>차량형 로봇의 경로 계획과 장애물 회피를 연구하며, 실물 차량 3대의 협동 주행을 목표로 가상 주행을 준비하고 있습니다.</p>
-              </div>
-              <div class="activity-meta">
-                <span class="status status-active">진행 중</span>
-              </div>
-            </li>
-            <li class="publication-row activity-row">
-              <div>
-                <h4><a href="projects/smart-apple-apc.html">Smart APC · 사과 선별·물류 자동화</a></h4>
-                <p>카메라가 판정한 사과 등급을 운반 구역에 연결하고, 팀에서 AMR 주행과 물류 제어를 맡았습니다.</p>
-              </div>
-              <div class="activity-meta">
-                <span><time datetime="2026-11">2026.11</time>–<time datetime="2026-12">12</time> 예정</span>
-                <span class="status status-active">팀 · 진행 중</span>
-              </div>
-            </li>
+        <div>
+          <p class="m-label">Physical AI</p>
+          <ul class="m-list" role="list">
+            <li><time datetime="2026-07">2026.07</time><div><h3><a href="projects/industrial-sim-capstone.html">Industrial Sim Capstone · 스마트 팩토리 물류 시뮬레이션</a></h3><p>RGB-D 비전 인식, 컨베이어, 로봇팔, Nav2 AMR을 하나의 ROS 2 물류 공정으로 통합했습니다.</p></div><span>개인 · 완료</span></li>
+            <li><time datetime="2026-11">2026.11 ~</time><div><h3><a href="projects/physical-ai-mobility.html">Physical AI · 강화학습 기반 멀티 로봇 주행</a></h3><p>차량형 로봇의 경로 계획과 장애물 회피를 연구하며, 실물 차량 3대의 협동 주행을 목표로 가상 주행을 준비하고 있습니다.</p></div><span>진행 중</span></li>
+            <li><time datetime="2026-11">2026.11 ~</time><div><h3><a href="projects/smart-apple-apc.html">Smart APC · 사과 선별 · 물류 자동화</a></h3><p>카메라가 판정한 사과 등급을 운반 구역에 연결하고, 팀에서 AMR 주행과 물류 제어를 맡았습니다.</p></div><span>팀 · 진행 중</span></li>
           </ul>
-        </section>
-
-        <section class="activity-group" aria-labelledby="activities-vision-title">
-          <h3 id="activities-vision-title">Vision AI</h3>
-          <ul class="publication-list activity-list" role="list">
-            <li class="publication-row activity-row">
-              <div>
-                <h4><a href="projects/jj-library-ocr.html">전주대학교 도서관 협업 · 책등 OCR</a></h4>
-                <p>스마트폰 사진에서 청구기호 라벨을 검출하고 문자를 읽는 장서점검 데모를 개발하고 있습니다.</p>
-              </div>
-              <div class="activity-meta">
-                <time datetime="2026-11">2026.11</time>
-                <span class="status status-active">진행 중</span>
-              </div>
-            </li>
+          <p class="m-label">Vision AI</p>
+          <ul class="m-list" role="list">
+            <li><time datetime="2026-11">2026.11 ~</time><div><h3><a href="projects/jj-library-ocr.html">전주대학교 도서관 협업 · 책등 OCR</a></h3><p>스마트폰 사진에서 청구기호 라벨을 검출하고 문자를 읽는 장서점검 데모를 개발하고 있습니다.</p></div><span>팀 · 진행 중</span></li>
           </ul>
-        </section>
+        </div>
       </div>
     </section>
 
-    <section class="section awards-section" id="awards" aria-labelledby="awards-title"><div class="container"><div class="section-heading"><div><p class="section-kicker">04 / AWARDS</p><h2 id="awards-title" class="section-title">수상 이력<span class="accent-period">.</span></h2></div></div>
-      <div class="publication-list">
-        <div class="publication-row"><span class="publication-index">2026.02</span><div><h3>THU AICOSS Industry Challenge · Excellent Result, Best Software Engineering Team</h3><p>독일 울름 공과대학교(Technische Hochschule Ulm)와 DASU가 주관한 산학 챌린지. 주제 “Handling Large Documents in Chatbots”에서 최우수 소프트웨어 엔지니어링 팀의 일원으로 선정되었습니다.</p></div><span class="publication-type">독일 · THU</span></div>
-        <div class="publication-row"><span class="publication-index">2022</span><div><h3>2022 빅데이터 분석 대회 · 최우수상</h3><p>빅데이터 분석 대회에서 최우수상을 받았습니다.</p></div><span class="publication-type">최우수상</span></div>
+    <!-- AWARDS -->
+    <section class="section m-split" id="awards" aria-labelledby="awards-title">
+      <div class="container m-split-grid">
+        <div class="m-split-head">
+          <p class="section-kicker">04 / Awards</p>
+          <h2 id="awards-title" class="section-title">수상 이력</h2>
+        </div>
+        <ul class="m-list" role="list">
+          <li><time datetime="2026-02">2026.02</time><div><h3>THU AICOSS Industry Challenge · Best Software Engineering Team</h3><p>독일 울름 공과대학교(Technische Hochschule Ulm)와 DASU가 주관한 산학 챌린지. 주제 “Handling Large Documents in Chatbots”에서 최우수 소프트웨어 엔지니어링 팀의 일원으로 선정되었습니다.</p></div><span>독일 · THU</span></li>
+          <li><time datetime="2022">2022</time><div><h3>2022 빅데이터 분석 대회 · 최우수상</h3><p>빅데이터 분석 대회에서 최우수상을 받았습니다.</p></div><span>최우수상</span></li>
+        </ul>
       </div>
-    </div></section>
+    </section>
 
-    <section class="section skills-section" id="skills" aria-labelledby="skills-title"><div class="container"><div class="section-heading"><div><p class="section-kicker">05 / SKILLS &amp; METHODS</p><h2 id="skills-title" class="section-title">기술과 연구 방법<span class="accent-period">.</span></h2></div></div><div class="skills-layout"><div class="skills-intro"><span class="skills-symbol" aria-hidden="true">{ }</span><h3>만들면서<br>익힌 기술</h3><p>도구 이름보다 어떤 문제에 어떻게 썼는지를 기준으로 정리했습니다. 계산은 코드로, 해석은 AI로 나누고, 결과는 테스트와 재현 가능한 실행으로 확인합니다.</p></div><div class="skill-groups" lang="en"><div class="skill-group"><span>01 / ROBOTICS</span><div><h3>Robotics &amp; Simulation</h3><p class="skill-projects">Industrial Sim Capstone · Smart APC · Physical AI Mobility</p></div><div class="skill-tags"><span>ROS 2</span><span>Gazebo</span><span>Nav2 · AMCL</span><span>RViz2</span><span>MuJoCo</span><span>Process State Machine Design</span></div></div><div class="skill-group"><span>02 / COMPUTER VISION</span><div><h3>Object Detection &amp; Text Recognition</h3><p class="skill-projects">Book Spine OCR · Industrial Sim Capstone</p></div><div class="skill-tags"><span>OpenCV</span><span>EasyOCR</span><span>RGB-D Position Estimation</span><span>YOLO11n</span><span>PP-OCRv5</span></div></div></div></div></div></section>
-
+    <!-- SKILLS -->
+    <section class="section m-split" id="skills" aria-labelledby="skills-title">
+      <div class="container m-split-grid">
+        <div class="m-split-head">
+          <p class="section-kicker">05 / Skills &amp; Methods</p>
+          <h2 id="skills-title" class="section-title">기술과 연구 방법</h2>
+          <p class="section-lead">도구 이름보다 어떤 문제에 어떻게 썼는지를 기준으로 정리했습니다. 계산은 코드로, 해석은 AI로 나누고, 결과는 테스트와 재현 가능한 실행으로 확인합니다.</p>
+        </div>
+        <ol class="m-rows m-skills" lang="en">
+          <li><span class="m-num">01</span><div><p class="m-tag">Robotics</p><h3>Robotics &amp; Simulation</h3><p>Industrial Sim Capstone · Smart APC · Physical AI Mobility</p></div><p class="m-chips"><span>ROS 2</span><span>Gazebo</span><span>Nav2 · AMCL</span><span>RViz2</span><span>MuJoCo</span><span>State Machine Design</span></p></li>
+          <li><span class="m-num">02</span><div><p class="m-tag">Computer Vision</p><h3>Object Detection &amp; Text Recognition</h3><p>Book Spine OCR · Industrial Sim Capstone</p></div><p class="m-chips"><span>OpenCV</span><span>YOLO11n</span><span>PP-OCRv5</span><span>EasyOCR</span><span>RGB-D Position</span></p></li>
+        </ol>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer"><div class="container footer-inner"><div><strong>Research Archive<span>.</span></strong><p>AI · DATA · PRACTICE</p></div><p>직접 만들고 검증한 기록을 모으는 연구 포트폴리오</p><a href="#top">맨 위로 <span aria-hidden="true">↑</span></a></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><div><strong>박해원</strong><p>Physical AI Engineer</p></div><p>hye1119703@naver.com · github.com/GitHaewon</p><a href="#top">맨 위로 ↑</a></div></footer>
 </body>
 </html>
