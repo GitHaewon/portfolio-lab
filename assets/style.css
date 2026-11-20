@@ -728,3 +728,59 @@
 .publications-section {
   background: var(--paper);
 }
+
+.activity-group + .activity-group {
+  margin-top: 36px;
+}
+
+.activity-group > h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.activity-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.activity-row {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.activity-row h4 {
+  margin: 0 0 5px;
+  font-size: 17px;
+}
+
+.activity-row h4 a {
+  text-decoration: underline;
+  text-decoration-color: var(--teal-dark);
+  text-underline-offset: .2em;
+}
+
+.activity-row p,
+.activity-meta {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.activity-meta {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (max-width: 560px) {
+  .activity-row {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-meta {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
