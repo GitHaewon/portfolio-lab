@@ -784,3 +784,13 @@
     gap: 8px;
   }
 }
+
+.license-list .certificate-card h2 {
+  margin: 0;
+}
+
+@media (min-width: 881px) {
+  .license-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
