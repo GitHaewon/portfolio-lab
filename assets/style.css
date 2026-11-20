@@ -811,3 +811,9 @@
   text-align: center;
   margin-top: 4px;
 }
+
+.detail-main .physical-ai-next a {
+  color: var(--teal, #167c6e);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

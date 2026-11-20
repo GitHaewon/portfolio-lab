@@ -7,7 +7,7 @@
   <meta name="description" content="AutoCAR III G 시뮬레이션에서 차량형 로봇의 전역 경로 계획과 동적 장애물 회피를 연구하는 진행 중인 Physical AI 프로젝트입니다.">
   <title>Physical AI · 멀티에이전트 모빌리티 | AI Research Portfolio</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/style.css?v=physical-ai-rl">
+  <link rel="stylesheet" href="../assets/style.css?v=physical-ai-design">
   <script src="../assets/app.js" defer></script>
 </head>
 <body>
@@ -46,8 +46,39 @@
             <ul>
               <li><strong>기준선.</strong> Hybrid A*로 전역 경로를 만들고, 모델 예측 경로 적분(MPPI)으로 근거리 주행을 제어합니다.</li>
               <li><strong>비교안.</strong> 같은 전역 경로를 사용하고, 시뮬레이션에서 학습한 PPO 정책으로 근거리 회피와 경로 복귀를 제어합니다.</li>
-              <li><strong>비교 원칙.</strong> 출발점, 목적지, 장애물의 이동 경로를 같게 두고 도달률, 충돌 횟수, 주행 시간, 경로 복귀 시간을 비교합니다. 가설, PPO 세부 설계, 평가 기준은 실험 설계 단계에서 확정합니다.</li>
+              <li><strong>비교 원칙.</strong> 출발점, 목적지, 장애물의 이동 경로를 같게 두고, 두 방식 모두 처음 보는 시험 시나리오에서 비교합니다. 세부 기준은 아래 실험 설계에 정리했습니다.</li>
             </ul>
+          </section>
+          <section aria-labelledby="design-title">
+            <h2 id="design-title">가설과 실험 설계</h2>
+            <h3 class="sub-heading">가설</h3>
+            <ul>
+              <li><strong>H1 · 반응성과 안전 여유의 맞교환.</strong> 장애물이 빠르거나 갑자기 방향을 바꿀수록 PPO가 MPPI보다 도달률이 높고 경로 복귀가 빠를 것입니다. 반면 장애물과의 최소 거리는 MPPI가 더 크게 유지할 수 있습니다. MPPI는 장애물 움직임이 급변하면 늦은 감속이나 급격한 보정이 생길 수 있고, 학습 기반 정책은 성공률은 높지만 고전적 방식보다 덜 보수적이라는 보고가 있기 때문입니다.</li>
+              <li><strong>H2 · 계산 부담.</strong> 1회 판단 시간은 작은 신경망 한 번만 계산하는 PPO가 수천 개의 후보 경로를 시뮬레이션하는 MPPI보다 짧을 것입니다. 다만 최적화된 MPPI도 엣지 보드에서 실시간으로 동작한다는 보고가 있으므로, 계산 시간은 주 지표가 아닌 보조 지표로 봅니다. 대신 연산 성능이 낮은 AutoCAR 보드에서 MPPI의 후보 경로 수를 줄여야 할 때 성능이 얼마나 떨어지는지를 함께 확인합니다.</li>
+              <li><strong>H3 · 일반화의 한계.</strong> 학습 때 보지 못한 장애물 속도나 배치에서는 PPO의 성능이 떨어지고, MPPI가 더 안정적일 수 있습니다. 강화학습 내비게이션 정책이 학습 분포를 벗어나면 성능이 떨어진다는 보고가 많아, 학습 시나리오를 다양하게 구성하고 처음 보는 조건을 시험 세트에 따로 넣습니다.</li>
+            </ul>
+            <h3 class="sub-heading">PPO 설계</h3>
+            <ul>
+              <li><strong>입력(관측).</strong> 360° 라이다 거리를 36~72방향으로 줄인 값, 다음 경로점 2~3개의 로봇 기준 상대 위치, 현재 속도와 조향각, 경로에서 벗어난 거리와 방향 오차</li>
+              <li><strong>출력(행동).</strong> 목표 속도와 조향각(연속값, 차량의 속도·조향 한계 안에서)</li>
+              <li><strong>보상.</strong> 경로를 따라 전진한 거리(+), 도착 보너스(+), 경로 이탈(−), 장애물에 안전거리 이내로 접근(−), 충돌(큰 −, 에피소드 종료), 조향 급변(−), 시간 경과(작은 −)</li>
+              <li><strong>학습 환경.</strong> 출발점, 목적지, 장애물의 속도와 이동 경로를 무작위로 바꾸고, 실물 이전에 대비해 센서 잡음, 바닥 마찰, 제어 지연도 무작위로 섞습니다.</li>
+            </ul>
+            <h3 class="sub-heading">공정한 비교</h3>
+            <ul>
+              <li><strong>같은 조건.</strong> 두 방식 모두 라이다 정보만 사용하고(시뮬레이터의 정답 위치는 사용하지 않음), 같은 차량 모델, 같은 속도·조향 한계, 같은 제어 주기, 같은 전역 경로를 씁니다. MPPI는 조향형 차량 모델을 지원하는 ROS 2 Nav2의 MPPI 컨트롤러를 기준선으로 사용합니다.</li>
+              <li><strong>시나리오 분리.</strong> 학습용, 조정용, 시험용 시나리오를 나눕니다. PPO는 학습용으로 학습하고, MPPI 파라미터는 조정용에서 튜닝합니다. 최종 비교는 두 방식 모두 처음 보는 시험용 시나리오로만 합니다.</li>
+              <li><strong>반복과 계산 시간.</strong> PPO는 서로 다른 시드로 3번 학습해 평균과 표준편차를 보고하고, 1회 판단 시간은 같은 보드에서 따로 측정합니다.</li>
+            </ul>
+            <h3 class="sub-heading">평가 정의</h3>
+            <ul>
+              <li><strong>성공.</strong> 제한 시간 안에, 충돌 없이, 목표 지점 30 cm 이내에 도착</li>
+              <li><strong>충돌.</strong> 시뮬레이터에서 차체와 장애물이 접촉한 경우</li>
+              <li><strong>경로 복귀 시간.</strong> 경로 이탈이 20 cm를 넘은 순간부터, 다시 20 cm 안으로 들어와 1초 이상 유지되는 순간까지</li>
+              <li><strong>추가 지표.</strong> 장애물과의 최소 거리(안전 여유), 조향 변화량(주행의 부드러움), 1회 판단 계산 시간</li>
+              <li><strong>시나리오.</strong> 장애물 속도 3단계(느림·보통·빠름)와 학습에 없던 속도 조건, 조건마다 30회 이상 반복</li>
+            </ul>
+            <p class="physical-ai-next">가설을 세울 때 참고한 연구: <a href="https://www.cs.utexas.edu/~xiao/papers/navbenchmark.pdf" target="_blank" rel="noopener">Xu et al., 강화학습 내비게이션 벤치마크</a> · <a href="https://arxiv.org/abs/2308.14947" target="_blank" rel="noopener">Sigal et al., 2024, 강화학습 내비게이션의 일반화</a> · <a href="https://www.mdpi.com/2076-0825/15/11/595" target="_blank" rel="noopener">Actuators, 2026, 강화학습과 MPPI·DWB 비교</a> · <a href="https://discourse.openrobotics.org/t/nav2-speedups-in-mppi-smac-planner/41667" target="_blank" rel="noopener">Nav2 MPPI 성능 개선 보고</a></p>
           </section>
           <section aria-labelledby="platform-title">
             <h2 id="platform-title">실험 플랫폼: AutoCAR III G</h2>
