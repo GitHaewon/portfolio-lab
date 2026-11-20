@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101b2e">
-  <meta name="description" content="로봇이 세상을 보고 스스로 움직이는 방법, 피지컬 AI와 Vision AI를 공부하고 탐구하는 학생의 포트폴리오입니다.">
+  <meta name="description" content="스마트 팩토리의 자율이동로봇(AMR) — 위치 추정, 경로 계획, 작업 배분을 공부하고 탐구하는 학생의 포트폴리오입니다.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:title" content="AI Research Portfolio | 연구 포트폴리오">
-  <meta property="og:description" content="로봇이 세상을 보고, 스스로 움직이는 방법을 탐구합니다.">
+  <meta property="og:description" content="스마트 팩토리의 자율이동로봇(AMR)을 탐구합니다.">
   <title>AI Research Portfolio | 연구 포트폴리오</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css?v=activity-groups">
@@ -34,18 +34,18 @@
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="container hero-layout">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span> PHYSICAL AI · VISION AI</p>
-          <p class="hero-overline">전주대학교 인공지능학과 · 피지컬 AI 공부 중</p>
-          <h1 id="hero-title">로봇이 <em>세상을 보고</em>,<br><em>스스로 움직이는</em> 방법을<br>탐구합니다.</h1>
-          <p class="hero-description">피지컬 AI와 Vision AI에 관심을 두고 있습니다. 카메라와 센서로 주변을 인식하는 컴퓨터 비전, 인식한 정보로 경로를 계획하고 움직이는 ROS 2·Nav2 기반 자율주행, 여러 장비를 하나의 흐름으로 묶는 시스템 통합을 공부하고 있습니다. 시뮬레이션과 실제 데이터로 직접 실험하며, 이해한 것과 아직 풀지 못한 질문을 함께 기록합니다.</p>
+          <p class="eyebrow"><span class="eyebrow-line"></span> PHYSICAL AI · AMR</p>
+          <p class="hero-overline">전주대학교 인공지능학과 · 자율이동로봇 탐구 중</p>
+          <h1 id="hero-title">스마트 팩토리의<br><em>자율이동로봇(AMR)</em>을<br>탐구합니다.</h1>
+          <p class="hero-description">공장과 물류 현장에서 AMR이 자기 위치를 알고, 장애물을 피해 길을 찾고, 맡은 운반 작업을 순서대로 처리하는 과정에 관심이 있습니다. ROS 2와 Nav2를 중심으로 위치 추정, 경로 계획, 여러 로봇의 작업 배분을 시뮬레이션에서 직접 실험하며 공부하고 있습니다.</p>
           <div class="hero-actions"><a class="button button-light" href="#projects">프로젝트 살펴보기 <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#activities">활동 기록 <span aria-hidden="true">↓</span></a></div>
         </div>
-        <div class="hero-art" role="img" aria-label="인식, 판단, 실행을 연결한 피지컬 AI 흐름을 표현한 추상적 다이어그램">
+        <div class="hero-art" role="img" aria-label="AMR의 위치 추정, 경로 계획, 작업 배분 흐름을 표현한 추상적 다이어그램">
           <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
           <span class="art-cross art-cross-one">+</span><span class="art-cross art-cross-two">+</span>
-          <div class="art-node art-node-one"><span class="art-index">01 / PERCEIVE</span><strong>보고 인식하기</strong><small>Vision · OCR · RGB-D</small></div>
-          <div class="art-node art-node-two"><span class="art-index">02 / DECIDE</span><strong>판단하고 계획하기</strong><small>State machine · Planning</small></div>
-          <div class="art-node art-node-three"><span class="art-index">03 / ACT</span><strong>움직이고 검증하기</strong><small>ROS 2 · Nav2 · Metrics</small></div>
+          <div class="art-node art-node-one"><span class="art-index">01 / LOCALIZE</span><strong>위치 추정</strong><small>LiDAR · AMCL</small></div>
+          <div class="art-node art-node-two"><span class="art-index">02 / PLAN</span><strong>경로 계획</strong><small>Nav2 · Costmap</small></div>
+          <div class="art-node art-node-three"><span class="art-index">03 / DELIVER</span><strong>작업 배분</strong><small>Task queue · Multi-robot</small></div>
           <span class="art-center">R<span>.</span></span>
         </div>
       </div>
